@@ -1,0 +1,9 @@
+2020-01-31 16:14:58.085 CET [85729] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin17.7.0, compiled by Apple LLVM version 10.0.0 (clang-1000.11.45.5), 64-bit
+2020-01-31 16:14:58.088 CET [85729] LOG:  listening on IPv6 address "::1", port 5432
+2020-01-31 16:14:58.088 CET [85729] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-01-31 16:14:58.089 CET [85729] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-01-31 16:14:58.108 CET [85730] LOG:  database system was shut down at 2020-01-31 16:14:47 CET
+2020-01-31 16:14:58.117 CET [85729] LOG:  database system is ready to accept connections
+2020-01-31 16:15:15.745 CET [85799] FATAL:  database "Address_Book_development" does not exist
+2020-01-31 16:17:10.542 CET [86137] ERROR:  column "person_id" of relation "emails" already exists
+2020-01-31 16:17:10.542 CET [86137] STATEMENT:  ALTER TABLE "emails" ADD "person_id" bigint NOT NULL
