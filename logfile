@@ -25,3 +25,325 @@
 2020-01-31 17:14:07.270 CET [89118] STATEMENT:  select * where person_id = 1;
 2020-01-31 17:14:19.842 CET [89118] ERROR:  column "person_id" does not exist at character 14
 2020-01-31 17:14:19.842 CET [89118] STATEMENT:  select where person_id = 1;
+2020-01-31 17:50:36.478 CET [93503] FATAL:  database "Address_Book_test-1" does not exist
+2020-01-31 17:50:36.478 CET [93504] FATAL:  database "Address_Book_test-0" does not exist
+2020-01-31 17:50:37.084 CET [93509] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:50:37.084 CET [93509] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:50:37.054961, 2020-01-31 16:50:37.054961).
+2020-01-31 17:50:37.084 CET [93509] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.054961', '2020-01-31 16:50:37.054961'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.054961', '2020-01-31 16:50:37.054961');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.065089', '2020-01-31 16:50:37.065089'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.065089', '2020-01-31 16:50:37.065089');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.069989', '2020-01-31 16:50:37.069989'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.069989', '2020-01-31 16:50:37.069989');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.074016', '2020-01-31 16:50:37.074016'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.074016', '2020-01-31 16:50:37.074016')
+2020-01-31 17:50:37.084 CET [93510] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:50:37.084 CET [93510] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:50:37.054961, 2020-01-31 16:50:37.054961).
+2020-01-31 17:50:37.084 CET [93510] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.054961', '2020-01-31 16:50:37.054961'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.054961', '2020-01-31 16:50:37.054961');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.064976', '2020-01-31 16:50:37.064976'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.064976', '2020-01-31 16:50:37.064976');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.070081', '2020-01-31 16:50:37.070081'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.070081', '2020-01-31 16:50:37.070081');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.074130', '2020-01-31 16:50:37.074130'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:50:37.074130', '2020-01-31 16:50:37.074130')
+2020-01-31 17:53:11.204 CET [93731] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:53:11.204 CET [93731] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:53:11.173325, 2020-01-31 16:53:11.173325).
+2020-01-31 17:53:11.204 CET [93731] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.173325', '2020-01-31 16:53:11.173325'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.173325', '2020-01-31 16:53:11.173325');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.182536', '2020-01-31 16:53:11.182536'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.182536', '2020-01-31 16:53:11.182536');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.186623', '2020-01-31 16:53:11.186623'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.186623', '2020-01-31 16:53:11.186623');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.190615', '2020-01-31 16:53:11.190615'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.190615', '2020-01-31 16:53:11.190615')
+2020-01-31 17:53:11.204 CET [93732] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:53:11.204 CET [93732] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:53:11.173315, 2020-01-31 16:53:11.173315).
+2020-01-31 17:53:11.204 CET [93732] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.173315', '2020-01-31 16:53:11.173315'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.173315', '2020-01-31 16:53:11.173315');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.182536', '2020-01-31 16:53:11.182536'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.182536', '2020-01-31 16:53:11.182536');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.186832', '2020-01-31 16:53:11.186832'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.186832', '2020-01-31 16:53:11.186832');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.190538', '2020-01-31 16:53:11.190538'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:53:11.190538', '2020-01-31 16:53:11.190538')
+2020-01-31 17:54:13.153 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.153 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.119706, 2020-01-31 16:54:13.119706).
+2020-01-31 17:54:13.153 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.119706', '2020-01-31 16:54:13.119706'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.119706', '2020-01-31 16:54:13.119706');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.132486', '2020-01-31 16:54:13.132486'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.132486', '2020-01-31 16:54:13.132486');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.136664', '2020-01-31 16:54:13.136664'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.136664', '2020-01-31 16:54:13.136664');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.141283', '2020-01-31 16:54:13.141283'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.141283', '2020-01-31 16:54:13.141283')
+2020-01-31 17:54:13.227 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.227 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.223897, 2020-01-31 16:54:13.223897).
+2020-01-31 17:54:13.227 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.223897', '2020-01-31 16:54:13.223897'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.223897', '2020-01-31 16:54:13.223897');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.223965', '2020-01-31 16:54:13.223965'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.223965', '2020-01-31 16:54:13.223965');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.224000', '2020-01-31 16:54:13.224000'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.224000', '2020-01-31 16:54:13.224000');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.224030', '2020-01-31 16:54:13.224030'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.224030', '2020-01-31 16:54:13.224030')
+2020-01-31 17:54:13.234 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.234 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.231158, 2020-01-31 16:54:13.231158).
+2020-01-31 17:54:13.234 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231158', '2020-01-31 16:54:13.231158'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231158', '2020-01-31 16:54:13.231158');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231222', '2020-01-31 16:54:13.231222'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231222', '2020-01-31 16:54:13.231222');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231256', '2020-01-31 16:54:13.231256'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231256', '2020-01-31 16:54:13.231256');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231295', '2020-01-31 16:54:13.231295'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.231295', '2020-01-31 16:54:13.231295')
+2020-01-31 17:54:13.241 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.241 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.238305, 2020-01-31 16:54:13.238305).
+2020-01-31 17:54:13.241 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238305', '2020-01-31 16:54:13.238305'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238305', '2020-01-31 16:54:13.238305');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238369', '2020-01-31 16:54:13.238369'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238369', '2020-01-31 16:54:13.238369');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238403', '2020-01-31 16:54:13.238403'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238403', '2020-01-31 16:54:13.238403');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238432', '2020-01-31 16:54:13.238432'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.238432', '2020-01-31 16:54:13.238432')
+2020-01-31 17:54:13.249 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.249 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.245702, 2020-01-31 16:54:13.245702).
+2020-01-31 17:54:13.249 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245702', '2020-01-31 16:54:13.245702'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245702', '2020-01-31 16:54:13.245702');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245764', '2020-01-31 16:54:13.245764'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245764', '2020-01-31 16:54:13.245764');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245798', '2020-01-31 16:54:13.245798'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245798', '2020-01-31 16:54:13.245798');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245879', '2020-01-31 16:54:13.245879'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.245879', '2020-01-31 16:54:13.245879')
+2020-01-31 17:54:13.257 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.257 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.253694, 2020-01-31 16:54:13.253694).
+2020-01-31 17:54:13.257 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253694', '2020-01-31 16:54:13.253694'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253694', '2020-01-31 16:54:13.253694');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253760', '2020-01-31 16:54:13.253760'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253760', '2020-01-31 16:54:13.253760');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253851', '2020-01-31 16:54:13.253851'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253851', '2020-01-31 16:54:13.253851');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253894', '2020-01-31 16:54:13.253894'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.253894', '2020-01-31 16:54:13.253894')
+2020-01-31 17:54:13.266 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.266 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.262734, 2020-01-31 16:54:13.262734).
+2020-01-31 17:54:13.266 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262734', '2020-01-31 16:54:13.262734'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262734', '2020-01-31 16:54:13.262734');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262808', '2020-01-31 16:54:13.262808'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262808', '2020-01-31 16:54:13.262808');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262843', '2020-01-31 16:54:13.262843'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262843', '2020-01-31 16:54:13.262843');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262873', '2020-01-31 16:54:13.262873'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.262873', '2020-01-31 16:54:13.262873')
+2020-01-31 17:54:13.276 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.276 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.272509, 2020-01-31 16:54:13.272509).
+2020-01-31 17:54:13.276 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272509', '2020-01-31 16:54:13.272509'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272509', '2020-01-31 16:54:13.272509');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272582', '2020-01-31 16:54:13.272582'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272582', '2020-01-31 16:54:13.272582');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272620', '2020-01-31 16:54:13.272620'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272620', '2020-01-31 16:54:13.272620');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272735', '2020-01-31 16:54:13.272735'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.272735', '2020-01-31 16:54:13.272735')
+2020-01-31 17:54:13.284 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.284 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.280428, 2020-01-31 16:54:13.280428).
+2020-01-31 17:54:13.284 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280428', '2020-01-31 16:54:13.280428'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280428', '2020-01-31 16:54:13.280428');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280497', '2020-01-31 16:54:13.280497'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280497', '2020-01-31 16:54:13.280497');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280540', '2020-01-31 16:54:13.280540'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280540', '2020-01-31 16:54:13.280540');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280577', '2020-01-31 16:54:13.280577'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.280577', '2020-01-31 16:54:13.280577')
+2020-01-31 17:54:13.292 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.292 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.288991, 2020-01-31 16:54:13.288991).
+2020-01-31 17:54:13.292 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.288991', '2020-01-31 16:54:13.288991'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.288991', '2020-01-31 16:54:13.288991');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.289059', '2020-01-31 16:54:13.289059'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.289059', '2020-01-31 16:54:13.289059');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.289097', '2020-01-31 16:54:13.289097'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.289097', '2020-01-31 16:54:13.289097');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.289128', '2020-01-31 16:54:13.289128'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.289128', '2020-01-31 16:54:13.289128')
+2020-01-31 17:54:13.300 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.300 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.296548, 2020-01-31 16:54:13.296548).
+2020-01-31 17:54:13.300 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296548', '2020-01-31 16:54:13.296548'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296548', '2020-01-31 16:54:13.296548');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296617', '2020-01-31 16:54:13.296617'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296617', '2020-01-31 16:54:13.296617');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296669', '2020-01-31 16:54:13.296669'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296669', '2020-01-31 16:54:13.296669');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296748', '2020-01-31 16:54:13.296748'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.296748', '2020-01-31 16:54:13.296748')
+2020-01-31 17:54:13.308 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.308 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.305305, 2020-01-31 16:54:13.305305).
+2020-01-31 17:54:13.308 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305305', '2020-01-31 16:54:13.305305'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305305', '2020-01-31 16:54:13.305305');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305369', '2020-01-31 16:54:13.305369'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305369', '2020-01-31 16:54:13.305369');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305403', '2020-01-31 16:54:13.305403'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305403', '2020-01-31 16:54:13.305403');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305463', '2020-01-31 16:54:13.305463'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.305463', '2020-01-31 16:54:13.305463')
+2020-01-31 17:54:13.317 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.317 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.313304, 2020-01-31 16:54:13.313304).
+2020-01-31 17:54:13.317 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313304', '2020-01-31 16:54:13.313304'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313304', '2020-01-31 16:54:13.313304');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313377', '2020-01-31 16:54:13.313377'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313377', '2020-01-31 16:54:13.313377');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313457', '2020-01-31 16:54:13.313457'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313457', '2020-01-31 16:54:13.313457');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313488', '2020-01-31 16:54:13.313488'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.313488', '2020-01-31 16:54:13.313488')
+2020-01-31 17:54:13.326 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.326 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.322965, 2020-01-31 16:54:13.322965).
+2020-01-31 17:54:13.326 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.322965', '2020-01-31 16:54:13.322965'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.322965', '2020-01-31 16:54:13.322965');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.323029', '2020-01-31 16:54:13.323029'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.323029', '2020-01-31 16:54:13.323029');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.323072', '2020-01-31 16:54:13.323072'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.323072', '2020-01-31 16:54:13.323072');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.323102', '2020-01-31 16:54:13.323102'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.323102', '2020-01-31 16:54:13.323102')
+2020-01-31 17:54:13.334 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.334 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.330923, 2020-01-31 16:54:13.330923).
+2020-01-31 17:54:13.334 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.330923', '2020-01-31 16:54:13.330923'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.330923', '2020-01-31 16:54:13.330923');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.331036', '2020-01-31 16:54:13.331036'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.331036', '2020-01-31 16:54:13.331036');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.331080', '2020-01-31 16:54:13.331080'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.331080', '2020-01-31 16:54:13.331080');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.331112', '2020-01-31 16:54:13.331112'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.331112', '2020-01-31 16:54:13.331112')
+2020-01-31 17:54:13.342 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.342 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.339427, 2020-01-31 16:54:13.339427).
+2020-01-31 17:54:13.342 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339427', '2020-01-31 16:54:13.339427'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339427', '2020-01-31 16:54:13.339427');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339499', '2020-01-31 16:54:13.339499'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339499', '2020-01-31 16:54:13.339499');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339535', '2020-01-31 16:54:13.339535'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339535', '2020-01-31 16:54:13.339535');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339604', '2020-01-31 16:54:13.339604'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.339604', '2020-01-31 16:54:13.339604')
+2020-01-31 17:54:13.351 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.351 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.34733, 2020-01-31 16:54:13.34733).
+2020-01-31 17:54:13.351 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347330', '2020-01-31 16:54:13.347330'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347330', '2020-01-31 16:54:13.347330');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347402', '2020-01-31 16:54:13.347402'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347402', '2020-01-31 16:54:13.347402');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347473', '2020-01-31 16:54:13.347473'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347473', '2020-01-31 16:54:13.347473');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347503', '2020-01-31 16:54:13.347503'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.347503', '2020-01-31 16:54:13.347503')
+2020-01-31 17:54:13.360 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.360 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.356575, 2020-01-31 16:54:13.356575).
+2020-01-31 17:54:13.360 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356575', '2020-01-31 16:54:13.356575'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356575', '2020-01-31 16:54:13.356575');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356639', '2020-01-31 16:54:13.356639'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356639', '2020-01-31 16:54:13.356639');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356673', '2020-01-31 16:54:13.356673'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356673', '2020-01-31 16:54:13.356673');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356746', '2020-01-31 16:54:13.356746'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.356746', '2020-01-31 16:54:13.356746')
+2020-01-31 17:54:13.367 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.367 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.364172, 2020-01-31 16:54:13.364172).
+2020-01-31 17:54:13.367 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364172', '2020-01-31 16:54:13.364172'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364172', '2020-01-31 16:54:13.364172');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364252', '2020-01-31 16:54:13.364252'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364252', '2020-01-31 16:54:13.364252');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364288', '2020-01-31 16:54:13.364288'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364288', '2020-01-31 16:54:13.364288');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364317', '2020-01-31 16:54:13.364317'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.364317', '2020-01-31 16:54:13.364317')
+2020-01-31 17:54:13.376 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.376 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.372614, 2020-01-31 16:54:13.372614).
+2020-01-31 17:54:13.376 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372614', '2020-01-31 16:54:13.372614'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372614', '2020-01-31 16:54:13.372614');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372677', '2020-01-31 16:54:13.372677'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372677', '2020-01-31 16:54:13.372677');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372794', '2020-01-31 16:54:13.372794'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372794', '2020-01-31 16:54:13.372794');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372827', '2020-01-31 16:54:13.372827'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.372827', '2020-01-31 16:54:13.372827')
+2020-01-31 17:54:13.385 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.385 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.380842, 2020-01-31 16:54:13.380842).
+2020-01-31 17:54:13.385 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.380842', '2020-01-31 16:54:13.380842'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.380842', '2020-01-31 16:54:13.380842');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.380949', '2020-01-31 16:54:13.380949'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.380949', '2020-01-31 16:54:13.380949');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.381025', '2020-01-31 16:54:13.381025'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.381025', '2020-01-31 16:54:13.381025');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.381073', '2020-01-31 16:54:13.381073'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.381073', '2020-01-31 16:54:13.381073')
+2020-01-31 17:54:13.393 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.393 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.390199, 2020-01-31 16:54:13.390199).
+2020-01-31 17:54:13.393 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390199', '2020-01-31 16:54:13.390199'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390199', '2020-01-31 16:54:13.390199');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390303', '2020-01-31 16:54:13.390303'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390303', '2020-01-31 16:54:13.390303');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390342', '2020-01-31 16:54:13.390342'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390342', '2020-01-31 16:54:13.390342');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390415', '2020-01-31 16:54:13.390415'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.390415', '2020-01-31 16:54:13.390415')
+2020-01-31 17:54:13.401 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.401 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.397771, 2020-01-31 16:54:13.397771).
+2020-01-31 17:54:13.401 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397771', '2020-01-31 16:54:13.397771'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397771', '2020-01-31 16:54:13.397771');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397845', '2020-01-31 16:54:13.397845'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397845', '2020-01-31 16:54:13.397845');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397890', '2020-01-31 16:54:13.397890'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397890', '2020-01-31 16:54:13.397890');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397933', '2020-01-31 16:54:13.397933'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.397933', '2020-01-31 16:54:13.397933')
+2020-01-31 17:54:13.410 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.410 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.406957, 2020-01-31 16:54:13.406957).
+2020-01-31 17:54:13.410 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.406957', '2020-01-31 16:54:13.406957'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.406957', '2020-01-31 16:54:13.406957');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.407021', '2020-01-31 16:54:13.407021'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.407021', '2020-01-31 16:54:13.407021');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.407068', '2020-01-31 16:54:13.407068'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.407068', '2020-01-31 16:54:13.407068');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.407098', '2020-01-31 16:54:13.407098'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.407098', '2020-01-31 16:54:13.407098')
+2020-01-31 17:54:13.424 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.424 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.420998, 2020-01-31 16:54:13.420998).
+2020-01-31 17:54:13.424 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.420998', '2020-01-31 16:54:13.420998'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.420998', '2020-01-31 16:54:13.420998');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.421082', '2020-01-31 16:54:13.421082'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.421082', '2020-01-31 16:54:13.421082');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.421203', '2020-01-31 16:54:13.421203'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.421203', '2020-01-31 16:54:13.421203');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.421246', '2020-01-31 16:54:13.421246'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.421246', '2020-01-31 16:54:13.421246')
+2020-01-31 17:54:13.432 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.432 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.429133, 2020-01-31 16:54:13.429133).
+2020-01-31 17:54:13.432 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429133', '2020-01-31 16:54:13.429133'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429133', '2020-01-31 16:54:13.429133');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429197', '2020-01-31 16:54:13.429197'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429197', '2020-01-31 16:54:13.429197');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429288', '2020-01-31 16:54:13.429288'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429288', '2020-01-31 16:54:13.429288');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429320', '2020-01-31 16:54:13.429320'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.429320', '2020-01-31 16:54:13.429320')
+2020-01-31 17:54:13.442 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.442 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.439141, 2020-01-31 16:54:13.439141).
+2020-01-31 17:54:13.442 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439141', '2020-01-31 16:54:13.439141'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439141', '2020-01-31 16:54:13.439141');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439208', '2020-01-31 16:54:13.439208'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439208', '2020-01-31 16:54:13.439208');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439243', '2020-01-31 16:54:13.439243'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439243', '2020-01-31 16:54:13.439243');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439273', '2020-01-31 16:54:13.439273'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.439273', '2020-01-31 16:54:13.439273')
+2020-01-31 17:54:13.453 CET [93834] ERROR:  null value in column "email" violates not-null constraint
+2020-01-31 17:54:13.453 CET [93834] DETAIL:  Failing row contains (980190962, null, null, null, 2020-01-31 16:54:13.448614, 2020-01-31 16:54:13.448614).
+2020-01-31 17:54:13.453 CET [93834] STATEMENT:  DELETE FROM "emails";
+	DELETE FROM "addresses";
+	DELETE FROM "phones";
+	DELETE FROM "people";
+	INSERT INTO "emails" ("id", "email", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448614', '2020-01-31 16:54:13.448614'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448614', '2020-01-31 16:54:13.448614');
+	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448700', '2020-01-31 16:54:13.448700'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448700', '2020-01-31 16:54:13.448700');
+	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448754', '2020-01-31 16:54:13.448754'), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448754', '2020-01-31 16:54:13.448754');
+	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448799', '2020-01-31 16:54:13.448799'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-31 16:54:13.448799', '2020-01-31 16:54:13.448799')
