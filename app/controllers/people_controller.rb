@@ -19,10 +19,17 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
+    @person.phones.build
+    @person.addresses.build
+    @person.emails.build
   end
 
   # GET /people/1/edit
   def edit
+    @person = Person.find(params[:id])
+    @person.phones.build
+    @person.addresses.build
+    @person.emails.build
   end
 
   # POST /people
@@ -46,7 +53,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to people_url, notice: 'Person was successfully updated.' }
+        format.html { redirect_to person_url(@person), notice: 'Person was successfully updated.' }
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }
@@ -73,6 +80,8 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:salutation, :first_name, :middle_name, :last_name, :social_security_number, :birthdate, :comment)
+      params.require(:person).permit(:salutation, :first_name, :middle_name, :last_name, :social_security_number, :birthdate, :comment,
+        addresses_attributes: [:street, :city, :zip, :state, :country]
+      )
     end
 end

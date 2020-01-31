@@ -1,15 +1,20 @@
-<%= form_with(model: phone, local: true) do |form| %>
-  <% if phone.errors.any? %>
+<%= form_with(model: @phone, local: true) do |form| %>
+  <% if @phone.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
+      <h2><%= pluralize(@phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
 
       <ul>
-        <% phone.errors.full_messages.each do |message| %>
+        <% @phone.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
+
+    <div>
+      <%= form.label :Phone_number %>
+      <%= form.text_field :phone_number %>
+    </div>
 
   <div class="actions">
     <%= form.submit %>

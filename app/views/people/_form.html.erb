@@ -28,6 +28,19 @@
     </div>
 
     <div>
+    Addresses:
+    <%= form.fields_for :addresses do |a_form| %>
+    <%= a_form.label :Street %>
+    <%= a_form.text_field :street %>
+    <%= a_form.label :City %>
+    <%= a_form.text_field :city %>
+    <%= a_form.label :Zip %>
+    <%= a_form.text_field :zip %>
+    <%= a_form.label :State %>
+    <%= a_form.text_field :state %>
+    <%= a_form.label :Country %>
+    <%= a_form.text_field :country %>
+    <% end %>
     </div>
 
   <div class="actions">
