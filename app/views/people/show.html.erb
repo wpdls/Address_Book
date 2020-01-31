@@ -3,6 +3,24 @@
     <td><%= @person.social_security_number%></td>
     <td><%= @person.birthdate.try(:birthdate).try(:strftime, '%d of %B, %Y')%></td>
     <td><%= @person.comment%></td>
+    <td><% @phones.each do |phone| %>
+        <p> <%= phone.phone_number %> </p>
+        <p> <%= phone.comment %> </p>
+        <% end %>
+    </td>
+    <td><% @emails.each do |email| %>
+        <p> <%= email.email %> </p>
+        <p> <%= email.comment %> </p>
+        <% end %>
+    </td>
+     <td><% @addresses.each do |address| %>
+        <p> <%= address.street %> </p>
+        <p> <%= address.city %> <%= address.zip %></p>
+        <p> <%= address.state %> <%= address.country %></p>
+        <% end %>
+    </td>
+
+
 
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

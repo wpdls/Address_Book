@@ -11,3 +11,5 @@ Address.create!(person_id: 1, street: 'Apple Street', city: 'Prague',
     state: 'Cali', zip: 12345, country: 'CZ')
 
 Phone.create!(person_id: 1, phone_number: 123456789, comment: 'This is my home phone number')
+
+Email.create!(person_id: 1, email: 'email@email.com', comment: 'This is a comment for email')
