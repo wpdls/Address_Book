@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+    <td><%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%></td>
+    <td><%= @person.social_security_number%></td>
+    <td><%= @person.birthdate.try(:birthdate).try(:strftime, '%d of %B, %Y')%></td>
+    <td><%= @person.comment%></td>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

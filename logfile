@@ -7,3 +7,21 @@
 2020-01-31 16:15:15.745 CET [85799] FATAL:  database "Address_Book_development" does not exist
 2020-01-31 16:17:10.542 CET [86137] ERROR:  column "person_id" of relation "emails" already exists
 2020-01-31 16:17:10.542 CET [86137] STATEMENT:  ALTER TABLE "emails" ADD "person_id" bigint NOT NULL
+2020-01-31 17:11:38.535 CET [89118] ERROR:  syntax error at or near "show" at character 10
+2020-01-31 17:11:38.535 CET [89118] STATEMENT:  SHOW ALL
+	show all
+	SELECT * FROM PEOPLE
+	select * from people
+	SELECT * INTO people
+	SELECT time()
+	SELECT now();
+2020-01-31 17:12:13.523 CET [89118] ERROR:  syntax error at or near "people" at character 10
+2020-01-31 17:12:13.523 CET [89118] STATEMENT:  SELECT * people;
+2020-01-31 17:12:21.829 CET [89118] ERROR:  syntax error at or near "PEOPLE" at character 10
+2020-01-31 17:12:21.829 CET [89118] STATEMENT:  SELECT * PEOPLE;
+2020-01-31 17:13:38.143 CET [89118] ERROR:  relation "person_id" does not exist at character 15
+2020-01-31 17:13:38.143 CET [89118] STATEMENT:  SELECT * from person_id;
+2020-01-31 17:14:07.270 CET [89118] ERROR:  SELECT * with no tables specified is not valid at character 8
+2020-01-31 17:14:07.270 CET [89118] STATEMENT:  select * where person_id = 1;
+2020-01-31 17:14:19.842 CET [89118] ERROR:  column "person_id" does not exist at character 14
+2020-01-31 17:14:19.842 CET [89118] STATEMENT:  select where person_id = 1;
