@@ -28,7 +28,7 @@ class EmailsController < ApplicationController
 
     respond_to do |format|
       if @email.save
-        format.html { redirect_to @email, notice: 'Email was successfully created.' }
+        format.html { redirect_to emails_url, notice: 'Email was successfully created.' }
         format.json { render :show, status: :created, location: @email }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class EmailsController < ApplicationController
   def update
     respond_to do |format|
       if @email.update(email_params)
-        format.html { redirect_to @email, notice: 'Email was successfully updated.' }
+        format.html { redirect_to emails_url, notice: 'Email was successfully updated.' }
         format.json { render :show, status: :ok, location: @email }
       else
         format.html { render :edit }
@@ -69,6 +69,6 @@ class EmailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def email_params
-      params.fetch(:email, {})
+      params.require(:email).permit(:email, :comment)
     end
 end
