@@ -43,6 +43,26 @@
     <% end %>
     </div>
 
+    <div>
+    Phone Number:
+    <%= form.fields_for :phones do |p_form| %>
+    <%= p_form.label :Phone_Number %>
+    <%= p_form.text_field :phone_number %>
+    <%= p_form.label :Comment %>
+    <%= p_form.text_field :comment %>
+    <% end %>
+    </div>
+
+      <div>
+    Email:
+    <%= form.fields_for :emails do |e_form| %>
+    <%= e_form.label :Email %>
+    <%= e_form.text_field :email %>
+    <%= e_form.label :Comment %>
+    <%= e_form.text_field :comment %>
+    <% end %>
+    </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
