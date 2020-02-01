@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+    @people = Person.order(:last_name, :first_name)
   end
 
   # GET /people/1
@@ -26,10 +26,6 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
-    @person = Person.find(params[:id])
-    @person.phones.build
-    @person.addresses.build
-    @person.emails.build
   end
 
   # POST /people
@@ -53,7 +49,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to person_url(@person), notice: 'Person was successfully updated.' }
+        format.html { redirect_to person_url(@person), notice: 'Person was successfully deleted.' }
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }

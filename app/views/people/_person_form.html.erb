@@ -28,43 +28,7 @@
       <%= form.text_area :comment %>
     </div>
 
-    <div>
-    Addresses:
-    <%= form.fields_for :addresses do |a_form| %>
-    <%= a_form.label :Street %>
-    <%= a_form.text_field :street %>
-    <%= a_form.label :City %>
-    <%= a_form.text_field :city %>
-    <%= a_form.label :Zip %>
-    <%= a_form.text_field :zip %>
-    <%= a_form.label :State %>
-    <%= a_form.text_field :state %>
-    <%= a_form.label :Country %>
-    <%= a_form.text_field :country %>
-    <% end %>
-    </div>
-
-    <div>
-    Phone Number:
-    <%= form.fields_for :phones do |p_form| %>
-    <%= p_form.label :Phone_Number %>
-    <%= p_form.text_field :phone_number %>
-    <%= p_form.label :Comment %>
-    <%= p_form.text_field :comment %>
-    <% end %>
-    </div>
-
-      <div>
-    Email:
-    <%= form.fields_for :emails do |e_form| %>
-    <%= e_form.label :Email %>
-    <%= e_form.text_field :email %>
-    <%= e_form.label :Comment %>
-    <%= e_form.text_field :comment %>
-    <% end %>
-    </div>
-
-  <div class="actions">
+      <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>

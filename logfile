@@ -907,3 +907,20 @@
 	INSERT INTO "addresses" ("id", "street", "city", "zip", "state", "country", "person_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', DEFAULT, 'MyString', DEFAULT, '2020-01-31 17:01:00.611647', '2020-01-31 17:01:00.611647'), (298486374, 'MyStreet', 'Prague', '12345', DEFAULT, 'Czech Republic', DEFAULT, '2020-01-31 17:01:00.611647', '2020-01-31 17:01:00.611647');
 	INSERT INTO "phones" ("id", "phone_number", "comment", "person_id", "created_at", "updated_at") VALUES (980190962, NULL, DEFAULT, DEFAULT, '2020-01-31 17:01:00.611690', '2020-01-31 17:01:00.611690'), (298486374, 12345678, DEFAULT, DEFAULT, '2020-01-31 17:01:00.611690', '2020-01-31 17:01:00.611690');
 	INSERT INTO "people" ("id", "salutation", "first_name", "middle_name", "last_name", "social_security_number", "birthdate", "comment", "created_at", "updated_at") VALUES (980190962, DEFAULT, 'John', DEFAULT, 'Doe', DEFAULT, '2020-01-30', DEFAULT, '2020-01-31 17:01:00.611725', '2020-01-31 17:01:00.611725'), (298486374, DEFAULT, 'MyString', DEFAULT, 'MyString', DEFAULT, '2020-01-30', DEFAULT, '2020-01-31 17:01:00.611725', '2020-01-31 17:01:00.611725')
+2020-02-01 15:03:48.147 CET [35442] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
+2020-02-01 15:03:48.147 CET [35442] STATEMENT:  SELECT "people".* FROM "people" WHERE (7) LIMIT $1
+2020-02-01 15:04:52.559 CET [35442] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
+2020-02-01 15:04:52.559 CET [35442] STATEMENT:  SELECT "people".* FROM "people" WHERE (7) LIMIT $1
+2020-02-01 15:06:06.790 CET [35442] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
+2020-02-01 15:06:06.790 CET [35442] STATEMENT:  SELECT "people".* FROM "people" WHERE (7) LIMIT $1
+2020-02-01 15:08:04.232 CET [35442] ERROR:  column "person_id" does not exist at character 40
+2020-02-01 15:08:04.232 CET [35442] STATEMENT:  SELECT "people".* FROM "people" WHERE (person_id) LIMIT $1
+2020-02-01 15:08:17.627 CET [35442] ERROR:  argument of WHERE must be type boolean, not type bigint at character 40
+2020-02-01 15:08:17.627 CET [35442] STATEMENT:  SELECT "people".* FROM "people" WHERE (id) LIMIT $1
+2020-02-01 15:09:14.249 CET [35442] ERROR:  argument of WHERE must be type boolean, not type people at character 40
+2020-02-01 15:09:14.249 CET [35442] STATEMENT:  SELECT "people".* FROM "people" WHERE (people) LIMIT $1
+2020-02-01 16:07:59.299 CET [89118] ERROR:  syntax error at or near "SELECT" at character 27
+2020-02-01 16:07:59.299 CET [89118] STATEMENT:  SELECT people from people
+	SELECT * from people where 
+	SELECT * from people where id = 1
+	SELECT * from emails;

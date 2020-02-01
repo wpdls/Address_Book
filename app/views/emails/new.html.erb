@@ -1,5 +1,10 @@
-<h1>New Email</h1>
+<%= @email.person_id.inspect %>
+<%= @person.inspect %>
+
+<h1>Add New Email</h1>
 
 <%= render 'form', email: @email %>
 
-<%= link_to 'Back', emails_path %>
+<%= puts @email %>
+
+<%# <%= link_to 'Back', person_path(@email.person_id) %> %>

@@ -14,7 +14,8 @@ class EmailsController < ApplicationController
 
   # GET /emails/new
   def new
-    @email = Email.new
+    @person = Person.find(params[:person_id])
+    @email = @person.emails.build(params[:email])
   end
 
   # GET /emails/1/edit
@@ -25,10 +26,11 @@ class EmailsController < ApplicationController
   # POST /emails.json
   def create
     @email = Email.new(email_params)
-
+    @person = Person.find(params[:person_id]).id
+  
     respond_to do |format|
       if @email.save
-        format.html { redirect_to emails_url, notice: 'Email was successfully created.' }
+        format.html { redirect_to person_path(@email.person_id), notice: 'Email was successfully created.' }
         format.json { render :show, status: :created, location: @email }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class EmailsController < ApplicationController
   def update
     respond_to do |format|
       if @email.update(email_params)
-        format.html { redirect_to emails_url, notice: 'Email was successfully updated.' }
+        format.html { redirect_to person_path(@email.person_id), notice: 'Email was successfully updated.' }
         format.json { render :show, status: :ok, location: @email }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class EmailsController < ApplicationController
   def destroy
     @email.destroy
     respond_to do |format|
-      format.html { redirect_to emails_url, notice: 'Email was successfully destroyed.' }
+      format.html { redirect_to person_path(@email.person_id), notice: 'Email was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -67,8 +69,15 @@ class EmailsController < ApplicationController
       @email = Email.find(params[:id])
     end
 
+    def set_person_with_email
+      @person.email = Email.find(params[:person_id])
+    end
+
+    # def set_person
+    #   @person = Person.find(params[:person_id])
+    # end
     # Never trust parameters from the scary internet, only allow the white list through.
     def email_params
-      params.require(:email).permit(:email, :comment)
+      params.require(:email).permit(:email, :comment, :person_id)
     end
 end

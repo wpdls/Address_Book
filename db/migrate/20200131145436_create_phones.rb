@@ -3,7 +3,7 @@ class CreatePhones < ActiveRecord::Migration[6.0]
     create_table :phones do |t|
       t.integer :phone_number, null: false
       t.text :comment
-      t.belongs_to :person, foreign_key: true
+      t.belongs_to :person, foreign_key: true, index: true
 
       t.timestamps
     end

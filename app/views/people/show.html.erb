@@ -1,27 +1,39 @@
 <p id="notice"><%= notice %></p>
+
+
     <td><%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%></td>
     <td><%= @person.social_security_number%></td>
     <td><%= @person.birthdate.try(:birthdate).try(:strftime, '%d of %B, %Y')%></td>
     <td><%= @person.comment%></td>
+    <%= link_to 'Edit Your basic INFO', edit_person_path(@person) %>
     <td><% @phones.each do |phone| %>
         <p> <%= phone.phone_number %> </p>
         <p> <%= phone.comment %> </p>
+        <%= link_to 'Edit your phone number', edit_phone_path(phone) %>
+        <%= link_to 'Delete your phone number', phone, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
+        <%= link_to 'Add more phone number', new_person_phone_path(:person_id => @person.id) %>
     </td>
     <td><% @emails.each do |email| %>
         <p> <%= email.email %> </p>
         <p> <%= email.comment %> </p>
+        <%= link_to 'Edit your email', edit_email_path(email) %>
+        <%= link_to 'Delete your email', email, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
+        <%= link_to 'Add email', new_person_email_path(:person_id => @person.id) %>
+        
     </td>
      <td><% @addresses.each do |address| %>
         <p> <%= address.street %> </p>
         <p> <%= address.city %> <%= address.zip %></p>
         <p> <%= address.state %> <%= address.country %></p>
+        <%= link_to 'Edit your address', edit_address_path(address) %>
+        <%= link_to 'Delete your address', address, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
+        <%= link_to 'Add Address', new_person_address_path(:person_id => @person.id) %>
     </td>
 
 
 
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
+ 
 <%= link_to 'Back', people_path %>

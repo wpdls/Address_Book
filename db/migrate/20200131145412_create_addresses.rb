@@ -6,7 +6,7 @@ class CreateAddresses < ActiveRecord::Migration[6.0]
       t.text :zip, null: false
       t.text :state
       t.text :country, null: false
-      t.belongs_to :person, foreign_key: true
+      t.belongs_to :person, foreign_key: true, index: true
 
       t.timestamps
     end

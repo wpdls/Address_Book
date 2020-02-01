@@ -7,6 +7,7 @@ class Person < ApplicationRecord
     accepts_nested_attributes_for :emails, allow_destroy: true
 
     validates :first_name, :last_name, presence: true
-    validates :social_security_number, numericality: { only_integer: true, allow_nil: true}
+    validates :social_security_number, length: {is: 10,
+    message: "Your Social Security Number should be 10 numbers"}, allow_nil: true
 
 end
