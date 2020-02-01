@@ -5,6 +5,7 @@
     <td><%= @person.social_security_number%></td>
     <td><%= @person.birthdate.try(:birthdate).try(:strftime, '%d of %B, %Y')%></td>
     <td><%= @person.comment%></td>
+    
     <%= link_to 'Edit Your basic INFO', edit_person_path(@person) %>
     <td><% @phones.each do |phone| %>
         <p> <%= phone.phone_number %> </p>

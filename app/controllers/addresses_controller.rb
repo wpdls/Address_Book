@@ -25,7 +25,9 @@ class AddressesController < ApplicationController
   # POST /addresses
   # POST /addresses.json
   def create
+    # @address = Address.new(address_params)
     @address = Address.new(address_params)
+    @person = Person.find(params[:person_id]).id
 
     respond_to do |format|
       if @address.save

@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'countries'
+gem 'email_validator'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -54,3 +55,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+if ENV['DEBUG_LOCAL']
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'country_select', path: '../country_select'
+else
+  gem 'country_select', github: 'stefanpenner/country_select'
+end

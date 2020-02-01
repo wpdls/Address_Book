@@ -26,7 +26,7 @@ class EmailsController < ApplicationController
   # POST /emails.json
   def create
     @email = Email.new(email_params)
-    @person = Person.find(params[:person_id]).id
+    # @person = Person.find(params[:person_id]).id
   
     respond_to do |format|
       if @email.save

@@ -22,7 +22,7 @@
     <%= form.label :State %>
     <%= form.text_field :state %>
     <%= form.label :Country %>
-    <%= form.text_field :country %>
+    <%= form.country_select :country, {priority_countries: ["US"], :prompt => "--select county--"} %>
     </div>
 
   <div class="actions">

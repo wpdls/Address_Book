@@ -40,7 +40,8 @@
     <%= a_form.label :State %>
     <%= a_form.text_field :state %>
     <%= a_form.label :Country %>
-    <%= a_form.text_field :country %>
+    <%= a_form.country_select :country, {priority_countries: ["US"], :prompt => "--select county--"} %>
+ 
     <% end %>
     </div>
 
