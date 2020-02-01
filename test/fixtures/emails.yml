@@ -6,8 +6,10 @@
 #
 one:
   email: MyString
+  person_id: 1
 # column: value
 #
 two:
   email: email@email.com
+  person_id: 1
 # column: value

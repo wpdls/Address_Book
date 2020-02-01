@@ -6,8 +6,10 @@
 #
 one:
   phone_number: 987654321
+  person_id: 1
 # column: value
 #
 two:
   phone_number: 12345678
+  person_id: 1
 # column: value

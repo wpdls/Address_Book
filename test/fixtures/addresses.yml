@@ -9,6 +9,7 @@ one:
   city: MyString
   zip: MyString
   country: MyString
+  person_id: 1
 # column: value
 #
 two:
@@ -16,4 +17,5 @@ two:
   city: Prague
   zip: 12345
   country: Czech Republic
+  person_id: 1
 # column: value

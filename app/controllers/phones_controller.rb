@@ -26,8 +26,8 @@ class PhonesController < ApplicationController
   # POST /phones.json
   def create
     # @phone = Phone.new(phone_params)
-    @phone = Phone.new(phone_params)
-    # @person = Person.find(params[:person_id]).id
+    @person = Person.find_by(params[:person_id])
+    @phone = @person.phones.build(phone_params)
   
     respond_to do |format|
       if @phone.save
