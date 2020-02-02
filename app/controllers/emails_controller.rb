@@ -26,8 +26,8 @@ class EmailsController < ApplicationController
   # POST /emails.json
   def create
     # @email = Email.new(email_params)
-    @person = Person.find_by(params[:person_id])
-    @email = @person.emails.build(email_params)
+    @person = Person.find(params[:person_id])
+    @email = @person.emails.build(email_params_new)
   
     respond_to do |format|
       if @email.save
@@ -73,5 +73,9 @@ class EmailsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def email_params
       params.require(:email).permit(:email, :comment, :person_id)
+    end
+
+    def email_params_new
+      params.permit(:email, :comment, :person_id)
     end
 end

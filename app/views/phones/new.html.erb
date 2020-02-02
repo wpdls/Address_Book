@@ -1,7 +1,8 @@
 <h1>New Phone</h1>
-<%= @phone.person_id.inspect %>
-<%= @person.inspect %>
 
-<%= render 'form', phone: @phone %>
+<%= @person.inspect %>
+<%= @phone.inspect %>
+
+<%= render 'form_new', phone: @phone %>
 
 <%= link_to 'Back', @person %>

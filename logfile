@@ -924,3 +924,5 @@
 	SELECT * from people where 
 	SELECT * from people where id = 1
 	SELECT * from emails;
+2020-02-02 17:59:41.962 CET [1921] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
+2020-02-02 17:59:41.962 CET [1921] STATEMENT:  SELECT "people".* FROM "people" WHERE (1) LIMIT $1

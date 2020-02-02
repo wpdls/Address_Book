@@ -26,8 +26,8 @@ class PhonesController < ApplicationController
   # POST /phones.json
   def create
     # @phone = Phone.new(phone_params)
-    @person = Person.find_by(params[:person_id])
-    @phone = @person.phones.build(phone_params)
+    @person = Person.find(params[:person_id])
+    @phone = @person.phones.build(phone_params_new)
   
     respond_to do |format|
       if @phone.save
@@ -74,4 +74,8 @@ class PhonesController < ApplicationController
     def phone_params
       params.require(:phone).permit(:phone_number, :comment, :person_id)
     end
-end
+
+    def phone_params_new
+      params.permit(:phone_number, :comment, :person_id)
+    end
+  end
