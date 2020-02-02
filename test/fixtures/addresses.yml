@@ -5,10 +5,10 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  street: MyString
-  city: MyString
-  zip: MyString
-  country: MyString
+  street: 123 Street Ave
+  city: Prague
+  zip: 1234A
+  country: Canada
   person_id: 1
 # column: value
 #

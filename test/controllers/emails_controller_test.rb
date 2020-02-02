@@ -5,26 +5,21 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
     @email = emails(:one)
   end
 
-  test "should get index" do
-    get emails_url
-    assert_response :success
-  end
-
   test "should get new" do
-    get new_email_url
+    get new_person_email_path(@email)
     assert_response :success
   end
 
   test "should create email" do
     assert_difference('Email.count') do
-      post emails_url, params: { email: { email: 'email@email.com', comment: 'This is a comment', person_id: '8' } }
+      post emails_url, params: { email: { email: 'email@email.com', comment: 'This is a comment', person_id: people(:one).id } }
     end
 
-    assert_redirected_to email_url(Email.last)
+    assert_redirected_to person_path(people(:one).id)
   end
 
   test "should show email" do
-    get email_url(@email)
+    get people_path(@email)
     assert_response :success
   end
 
@@ -43,6 +38,6 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
       delete email_url(@email)
     end
 
-    assert_redirected_to emails_url
+    assert_redirected_to person_path(@email.person_id)
   end
 end

@@ -28,7 +28,7 @@
         <p> <%= address.street %> </p>
         <p> <%= address.city %> <%= address.zip %></p>
         <p> <%= address.state %> <%= address.country %></p>
-        <%= link_to 'Edit your address', edit_address_path(address) %>
+        <%= link_to 'Edit your address', edit_address_path(address, @person.id) %>
         <%= link_to 'Delete your address', address, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
         <%= link_to 'Add Address', new_person_address_path(:person_id => @person.id) %>

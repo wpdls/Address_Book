@@ -5,37 +5,32 @@ class AddressesControllerTest < ActionDispatch::IntegrationTest
     @address = addresses(:one)
   end
 
-  test "should get index" do
-    get addresses_url
-    assert_response :success
-  end
-
   test "should get new" do
-    get new_address_url
+    get new_person_address_path(@address)
     assert_response :success
   end
 
   test "should create address" do
     assert_difference('Address.count') do
-      post addresses_url, params: { address: { street: @address.street, city: @address.city, zip: @address.zip, state: @address.state, country: @address.country } }
+      post addresses_url, params: { address: { street: @address.street, city: @address.city, zip: @address.zip, state: @address.state, country: @address.country, person_id: people(:one).id } }
     end
 
-    assert_redirected_to address_url(Address.last)
+    assert_redirected_to person_path(people(:one).id)
   end
 
   test "should show address" do
-    get address_url(@address)
+    get people_path(@address)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_address_url(@address)
+    get edit_address_path(@address)
     assert_response :success
   end
 
   test "should update address" do
-    patch address_url(@address), params: { address: { street: @address.street, city: @address.city, zip: @address.zip, state: @address.state, country: @address.country } }
-    assert_redirected_to address_url(@address)
+    patch address_path(@address), params: { address: { street: @address.street, city: @address.city, zip: @address.zip, state: @address.state, country: @address.country, person_id: people(:one).id } }
+    assert_redirected_to person_path(@address)
   end
 
   test "should destroy address" do
@@ -43,6 +38,6 @@ class AddressesControllerTest < ActionDispatch::IntegrationTest
       delete address_url(@address)
     end
 
-    assert_redirected_to addresses_url
+    assert_redirected_to person_path(@address.person_id)
   end
 end
