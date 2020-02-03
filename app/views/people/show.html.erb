@@ -3,31 +3,17 @@
       <%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%>
     </h1>
 
-    <div class="container_show">
-    <div class="show">
-      <td><%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%></td>
-      <td><%= @person.social_security_number%></td>
-      <td><%= @person.birthdate.try(:birthdate).try(:strftime, '%d of %B, %Y')%></td>
-      <td><%= @person.comment%></td>
-      </div>
-      <div class="add">
-      <%= link_to 'edit/add your basic info', edit_person_path(@person) %>
+    <div class="container_show" id="people">
+      <%= render @person %>
+      <div id="add">
+      <%= link_to 'edit/add your basic info', edit_person_path(@person), remote: true %>
       </div>
     </div>
 
-    <div class="container_show">
-      <% @phones.each do |phone| %>
-      <div class="show">
-      <p> <%= phone.phone_number %> </p>
-      <p> <%= phone.comment %> </p>
-      <div class="links">
-      <%= link_to 'edit', edit_phone_path(phone) %>   
-      <%= link_to 'delete', phone, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-      </div>
-      <% end %>
-      <div class="add">
-      <%= link_to 'add more phone numbers', new_person_phone_path(:person_id => @person.id) %>
+    <div class="container_show" id="phone-container">
+      <%= render @person.phones %>
+      <div class="add" id="new-phone">
+      <%= link_to 'add more phone numbers', new_person_phone_path(:person_id => @person.id), remote: true, id: "phone" %>
       </div>
     </div>
 
@@ -66,9 +52,6 @@
       </div>
     </div>
     
-
-
-
  <div class="button">
 <%= link_to 'Back', people_path %>
 </div>

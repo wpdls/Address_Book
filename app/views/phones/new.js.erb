@@ -1,0 +1,4 @@
+<%# jQuery(document).ready(function($) {
+$('#new-phone a').parent().html("<%= j render 'form', phone: @phone %>
+
+$('#phone').hide().parent().append("<%= j render 'form_new', phone: @phone %>");

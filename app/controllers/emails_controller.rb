@@ -32,9 +32,11 @@ class EmailsController < ApplicationController
     respond_to do |format|
       if @email.save
         format.html { redirect_to person_path(@email.person_id), notice: 'Email was successfully created.' }
+        format.js
         format.json { render :show, status: :created, location: @email }
       else
         format.html { render :new }
+        format.js
         format.json { render json: @email.errors, status: :unprocessable_entity }
       end
     end
@@ -46,9 +48,11 @@ class EmailsController < ApplicationController
     respond_to do |format|
       if @email.update(email_params)
         format.html { redirect_to person_path(@email.person_id), notice: 'Email was successfully updated.' }
+        format.js
         format.json { render :show, status: :ok, location: @email }
       else
         format.html { render :edit }
+        format.js
         format.json { render json: @email.errors, status: :unprocessable_entity }
       end
     end
@@ -60,6 +64,7 @@ class EmailsController < ApplicationController
     @email.destroy
     respond_to do |format|
       format.html { redirect_to person_path(@email.person_id), notice: 'Email was successfully deleted.' }
+      format.js
       format.json { head :no_content }
     end
   end

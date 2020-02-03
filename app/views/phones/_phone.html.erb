@@ -1,0 +1,13 @@
+<div id="hello">
+<section class="show">
+<div id="phone-show">
+<p> <%= phone.phone_number %> </p>
+<p> <%= phone.comment %> </p>
+</div>
+<div class="links">
+<%= link_to 'edit', edit_phone_path(phone) %>   
+<%= link_to 'delete', phone, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "delete" %>
+
+</div>
+</section>
+</div>

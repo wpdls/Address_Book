@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :phones, only: [:new, :create]
     resources :addresses, only: [:new, :create]
 
-  get 'people#index' => 'phones#index'
+  root 'people#index'
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

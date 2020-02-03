@@ -1,4 +1,4 @@
-<%= form_with url: person_phones_path(@phone.person_id), local: true do |form| %>
+<%= form_with url: person_phones_path(@phone.person_id), id: "phone-form" do |form| %>
 
   <% if @phone.errors.any? %>
     <div id="error_explanation">

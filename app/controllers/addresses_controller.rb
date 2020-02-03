@@ -32,9 +32,11 @@ class AddressesController < ApplicationController
     respond_to do |format|
       if @address.save
         format.html { redirect_to person_path(@address.person_id), notice: 'Address was successfully created.' }
+        format.js
         format.json { render :show, status: :created, location: @address }
       else
         format.html { render :new }
+        format.js
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end
@@ -46,9 +48,11 @@ class AddressesController < ApplicationController
     respond_to do |format|
       if @address.update(address_params)
         format.html { redirect_to person_path(@address.person_id), notice: 'Address was successfully updated.' }
+        format.js
         format.json { render :show, status: :ok, location: @address }
       else
         format.html { render :edit }
+        format.js
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end
@@ -60,6 +64,7 @@ class AddressesController < ApplicationController
     @address.destroy
     respond_to do |format|
       format.html { redirect_to person_path(@address.person_id), notice: 'Address was successfully destroyed.' }
+      format.js
       format.json { head :no_content }
     end
   end

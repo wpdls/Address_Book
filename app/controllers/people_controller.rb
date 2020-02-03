@@ -50,9 +50,11 @@ class PeopleController < ApplicationController
     respond_to do |format|
       if @person.update(person_params)
         format.html { redirect_to person_url(@person), notice: 'Person was successfully deleted.' }
+        format.js
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }
+        format.js
         format.json { render json: @person.errors, status: :unprocessable_entity }
       end
     end
@@ -64,6 +66,7 @@ class PeopleController < ApplicationController
     @person.destroy
     respond_to do |format|
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
+      format.js
       format.json { head :no_content }
     end
   end
