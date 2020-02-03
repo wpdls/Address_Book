@@ -12,43 +12,22 @@
 
     <div class="container_show" id="phone-container">
       <%= render @person.phones %>
-      <div class="add" id="new-phone">
+      <div class="add">
       <%= link_to 'add more phone numbers', new_person_phone_path(:person_id => @person.id), remote: true, id: "phone" %>
       </div>
     </div>
 
-    <div class="container_show">
-      <% @emails.each do |email| %>
-      <div class="show">
-      <p> <%= email.email %> </p>
-      <p> <%= email.comment %> </p>
-      <div class="links">
-      <%= link_to 'edit', edit_email_path(email) %>
-      <%= link_to 'delete', email, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-      </div>
-      <% end %>
+    <div class="container_show" id="email-container">
+    <%= render @person.emails %>
       <div class="add">
-      <%= link_to 'add more emails', new_person_email_path(:person_id => @person.id) %>
+      <%= link_to 'add more emails', new_person_email_path(:person_id => @person.id), remote: true, id: "email" %>
       </div>
     </div>
         
-    <div class="container_show">
-      <% @addresses.each do |address| %>
-      <div class="show">
-      <div>
-      <p> <%= address.street %> </p>
-      <p> <%= address.city %>, <%= address.state %> <%= address.zip %></p>
-      <p><%= address.country %></p>
-      </div>
-      <div class="links">
-      <%= link_to 'edit', edit_address_path(address, @person.id) %>
-      <%= link_to 'delete', address, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-      </div>
-      <% end %>
+    <div class="container_show" id="address-container">
+    <%= render @person.addresses%>
       <div class="add">
-      <%= link_to 'add more Addresses', new_person_address_path(:person_id => @person.id) %>
+      <%= link_to 'add more Addresses', new_person_address_path(:person_id => @person.id), remote: true, id: "address" %>
       </div>
     </div>
     

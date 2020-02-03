@@ -1,4 +1,4 @@
-<%= form_with(model: @email, local: true) do |form| %>
+<%= form_with model: @email, id: "form" do |form| %>
 
   <% if @email.errors.any? %>
     <div id="error_explanation">
