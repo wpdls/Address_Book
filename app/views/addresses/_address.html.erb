@@ -7,7 +7,7 @@
       </div>
 
       <div class="links">
-      <%= link_to 'edit', edit_address_path(address, @person.id), remote: true %>
+      <%= link_to 'edit', edit_address_path(address), remote: true %> 
       <%= link_to 'delete', address, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "delete" %>
       </div>
   </section>

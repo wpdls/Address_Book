@@ -24,10 +24,10 @@
       </div>
     </div>
         
-    <div class="container_show" id="address-container">
-    <%= render @person.addresses%>
+     <div class="container_show" id="address-container">
+     <%= render @person.addresses%>
       <div class="add">
-      <%= link_to 'add more Addresses', new_person_address_path(:person_id => @person.id), remote: true, id: "address" %>
+      <%= link_to 'add more addresses', new_person_address_path(:person_id => @person.id), remote: true, id: "address" %>
       </div>
     </div>
     
