@@ -11,7 +11,8 @@
     </div>
   <% end %>
 
-    <div>
+  <div >
+    <div class="form">
       <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %>
       <%= form.label :First_Name %>
       <%= form.text_field :first_name %>
@@ -19,33 +20,36 @@
       <%= form.text_field :middle_name %>
       <%= form.label :Last_Name %>
       <%= form.text_field :last_name %>
-      <%= form.label :Social_Security_Number %>
-      <%= form.text_field :social_security_number %>
-      <%= form.label :Birthday %>
-      <%= form.date_select :birthdate, 
-      {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year, end_year: Date.today.year - 100} %>
-      <%= form.label :Comment %>
-      <%= form.text_area :comment %>
     </div>
+    <%= form.label :Social_Security_Number %>
+    <%= form.text_field :social_security_number %>
+    <%= form.label :Birthday %>
+    <%= form.date_select :birthdate, 
+    {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, 
+    start_year: Date.today.year, end_year: Date.today.year - 100} %>
+    <%= form.label :Comment %>
+    <%= form.text_area :comment %>
+  </div>
 
-    <div>
+  <div>
     Addresses:
     <%= form.fields_for :addresses do |a_form| %>
     <%= a_form.label :Street %>
     <%= a_form.text_field :street %>
-    <%= a_form.label :City %>
-    <%= a_form.text_field :city %>
-    <%= a_form.label :Zip %>
-    <%= a_form.text_field :zip %>
-    <%= a_form.label :State %>
-    <%= a_form.text_field :state %>
+    <div>
+      <%= a_form.label :City %>
+      <%= a_form.text_field :city %>
+      <%= a_form.label :Zip %>
+      <%= a_form.text_field :zip %>
+      <%= a_form.label :State %>
+      <%= a_form.text_field :state %>
+    </div>
     <%= a_form.label :Country %>
     <%= a_form.country_select :country, {priority_countries: ["US"], :prompt => "--select county--"} %>
- 
     <% end %>
-    </div>
+  </div>
 
-    <div>
+  <div>
     Phone Number:
     <%= form.fields_for :phones do |p_form| %>
     <%= p_form.label :Phone_Number %>
@@ -53,9 +57,9 @@
     <%= p_form.label :Comment %>
     <%= p_form.text_field :comment %>
     <% end %>
-    </div>
+  </div>
 
-      <div>
+  <div>
     Email:
     <%= form.fields_for :emails do |e_form| %>
     <%= e_form.label :Email %>
@@ -63,7 +67,7 @@
     <%= e_form.label :Comment %>
     <%= e_form.text_field :comment %>
     <% end %>
-    </div>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

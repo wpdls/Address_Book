@@ -1,27 +1,28 @@
 <p id="notice"><%= notice %></p>
+<div class="box">
+  <div>
+  <h1>People</h1>
+  </div>
 
-<h1>People</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= person.first_name%> <%= person.last_name%></td>
-        <td><%= link_to 'Show', person %></td>
-        <%# <td><%= link_to 'Edit', edit_person_path(person) %>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  
+  <table class="box">
+    
+      <% @people.each do |person| %>
+    <tr class="table">
+    
+          <td><%= person.first_name%> <%= person.last_name%></td>
         
-    <% end %>
-  </tbody>
-</table>
+          <td><%= link_to 'Show', person %><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    
+  
+      <% end %>
+    
+  </table>
+  
 
-<br>
-
-<%= link_to 'New Person', new_person_path %>
+  <div>
+  <div class="button">
+    <%= link_to 'New Person', new_person_path, :class => "text-warning" %>
+  </div>
+  <div>
+<div>

@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+//  @import "bootstrap";
+* {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    font-family: Helvetica, sans-serif;
+} 
+html {
+     height: 100vh;
+     margin-right: 0;
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+     justify-items: center;
+     font-family: Helvetica, sans-serif;
+ }
+
+ style {
+    display: none;
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 0px;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 2rem
+}

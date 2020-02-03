@@ -11,22 +11,23 @@
     </div>
   <% end %>
 
-    <div>
-      <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %>
-      <%= form.label :First_Name %>
-      <%= form.text_field :first_name %>
-      <%= form.label :Middle_Name %>
-      <%= form.text_field :middle_name %>
-      <%= form.label :Last_Name %>
-      <%= form.text_field :last_name %>
-      <%= form.label :Social_Security_Number %>
-      <%= form.text_field :social_security_number %>
-      <%= form.label :Birthday %>
-      <%= form.date_select :birthdate, 
-      {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year, end_year: Date.today.year - 100} %>
-      <%= form.label :Comment %>
-      <%= form.text_area :comment %>
-    </div>
+  <div>
+    <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %>
+    <%= form.label :First_Name %>
+    <%= form.text_field :first_name %>
+    <%= form.label :Middle_Name %>
+    <%= form.text_field :middle_name %>
+    <%= form.label :Last_Name %>
+    <%= form.text_field :last_name %>
+    <%= form.label :Social_Security_Number %>
+    <%= form.text_field :social_security_number %>
+    <%= form.label :Birthday %>
+    <%= form.date_select :birthdate, 
+    {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, 
+    start_year: Date.today.year, end_year: Date.today.year - 100} %>
+    <%= form.label :Comment %>
+    <%= form.text_area :comment %>
+  </div>
 
       <div class="actions">
     <%= form.submit %>

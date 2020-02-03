@@ -1,3 +1,126 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+p#notice {
+    padding: 1rem;
+}
+body {
+    margin-top: 0px;
+    padding: 0px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 100rem;
+    // height: 80vh;
+    font-family: Helvetica, sans-serif;
+    
+
+    a:hover {
+        color: rgba(255, 196, 0, 0.637);
+        background-color: white;
+    }
+}
+
+.index {
+    margin: 1px;
+    width: 50px;
+   
+}
+
+.container {
+    text-align: center;
+    border: 1px dotted black;
+
+}
+
+.button {
+    padding-top: 2rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+}
+
+.table {
+    border: 10px double black;
+    width: 200px;
+    padding: 1rem;
+    th {
+        padding: 0px;
+    }
+    td{
+        font-family: 'DM Serif Display', serif;
+        font-size: 30px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        a {
+            font-family: Helvetica, sans-serif;
+            font-size: 15px;
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+    } 
+}
+
+table {
+    width: 100px;
+    display: flex;
+    
+}
+
+tbody {
+    width: 100rem;
+}
+
+.box {
+    width: 100rem;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.container_show {
+    text-align: center;
+    border: 10px double rgb(78, 77, 77);
+    width: 300px;
+    padding: .5rem;
+
+}
+
+.show {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    border-bottom: 3px solid black;
+    padding: .7rem .7rem;
+    display: flex;
+    flex-direction: row;
+    p {
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        padding-right: 1rem;
+    }
+    .links {
+        display: flex;
+        a {
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+        }
+    }
+}
+
+.add {
+    padding-top: 1rem;
+    font-size: 15px;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+}

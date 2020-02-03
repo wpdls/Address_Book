@@ -1,5 +1,7 @@
-<h1>Editing Person</h1>
+<h2>Edit Your Info:</h2>
 
 <%= render 'person_form', person: @person %>
 
+<div class="button">
 <%= link_to 'Back', person_path(@person.id) %>
+</div>

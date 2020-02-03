@@ -1,6 +1,7 @@
-<h1>Add New Email</h1>
-<%= @person.inspect %>
+<h2>Add New Email:</h2>
 
 <%= render 'form_new', email: @email %>
 
+<div class="button">
 <%= link_to 'Back', person_path(@email.person_id) %>
+</div>

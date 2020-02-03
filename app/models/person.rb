@@ -9,5 +9,4 @@ class Person < ApplicationRecord
     validates :first_name, :last_name, presence: true
     validates :social_security_number, length: {is: 10,
     message: "Your Social Security Number should be 10 numbers"}, allow_nil: true
-
 end

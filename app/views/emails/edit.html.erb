@@ -1,5 +1,7 @@
-<h1>Edit Your Email:</h1>
+<h2>Edit Your Email:</h2>
 
 <%= render 'form', email: @email %>
 
+<div class="button">
 <%= link_to 'Back', person_path(@email.person_id) %>
+</div>
