@@ -48,8 +48,6 @@ class PhonesController < ApplicationController
   # PATCH/PUT /phones/1
   # PATCH/PUT /phones/1.json
   def update
-   
-  
     respond_to do |format|
       if @phone.update(phone_params)
         format.html { redirect_to person_path(@phone.person_id), notice: 'Phone was successfully updated.' }

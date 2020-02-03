@@ -13,10 +13,10 @@
   <% end %>
 
     <div>
-      <%= form.label :Email %>
-      <%= form.text_field :email %>
+      <div class="require">*<%= form.label :Email %></div>
+      <%= form.text_field :email, :size => 40 %><br>
       <%= form.label :Comment %>
-      <%= form.text_field :comment %>
+      <%= form.text_field :comment %><br>
     </div>
 
   <div class="actions">

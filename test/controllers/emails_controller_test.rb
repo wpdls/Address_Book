@@ -29,8 +29,8 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update email" do
-    patch email_url(@email), params: { email: { email: 'email@email.com', comment: 'This is a comment', person_id: '8'  } }
-    assert_redirected_to email_url(@email)
+    patch email_url(@email), params: { email: { email: 'email@email.com', comment: 'This is a comment', person_id: people(:one).id  } }
+    assert_redirected_to person_path(@email)
   end
 
   test "should destroy email" do

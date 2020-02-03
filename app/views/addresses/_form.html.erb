@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :Street %>
-    <%= form.text_field :street %>
-    <%= form.label :City %>
-    <%= form.text_field :city %>
-    <%= form.label :Zip %>
-    <%= form.text_field :zip %>
+    <div class="require">*<%= form.label :Street %></div>
+    <%= form.text_field :street, :size => 40 %><div class="padding"></div>
+    <div class="require">*<%= form.label :City %></div>
+    <%= form.text_field :city, :size => 40 %><div class="padding"></div>
+    <div class="require">*<%= form.label :Zip %></div>
+    <%= form.text_field :zip, :size => 40 %><div class="padding"></div>
     <%= form.label :State %>
-    <%= form.text_field :state %>
-    <%= form.label :Country %>
-    <%= form.country_select :country, {priority_countries: ["US"], :prompt => "--select county--"} %>
+    <%= form.text_field :state, :size => 40 %><div class="padding"></div>
+    <div class="require">*<%= form.label :Country %></div>
+    <%= form.country_select :country, {priority_countries: ["US"], :prompt => "--select county--"} %><div class="padding"></div>
   </div>
 
   <div class="actions">

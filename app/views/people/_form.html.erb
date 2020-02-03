@@ -11,63 +11,65 @@
     </div>
   <% end %>
 
-  <div >
-    <div class="form">
-      <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %>
-      <%= form.label :First_Name %>
-      <%= form.text_field :first_name %>
+  <div class="person-form">
+    
+      <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %><div class="padding"></div>
+      
+      <div class="require">*<%= form.label :First_Name %></div>
+      <%= form.text_field :first_name %>    
+
       <%= form.label :Middle_Name %>
       <%= form.text_field :middle_name %>
-      <%= form.label :Last_Name %>
+      <div class="require">*<%= form.label :Last_Name %></div>
       <%= form.text_field :last_name %>
-    </div>
     <%= form.label :Social_Security_Number %>
-    <%= form.text_field :social_security_number %>
-    <%= form.label :Birthday %>
+    <%= form.text_field :social_security_number, :size => 40 %><div class="padding"></div>
+    <div class="form"><%= form.label :Birthday %>
     <%= form.date_select :birthdate, 
     {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, 
-    start_year: Date.today.year, end_year: Date.today.year - 100} %>
+    start_year: Date.today.year, end_year: Date.today.year - 100} %></div>
     <%= form.label :Comment %>
     <%= form.text_area :comment %>
   </div>
-
-  <div>
-    Addresses:
+<br>
+  <div class="person-form">
+    <h3>Address:</h3>
     <%= form.fields_for :addresses do |a_form| %>
-    <%= a_form.label :Street %>
-    <%= a_form.text_field :street %>
+    <div class="require">*<%= a_form.label :Street %></div>
+    <%= a_form.text_field :street, :size => 40 %>
     <div>
-      <%= a_form.label :City %>
-      <%= a_form.text_field :city %>
-      <%= a_form.label :Zip %>
-      <%= a_form.text_field :zip %>
+      <div class="require">*<%= a_form.label :City %></div>
+      <%= a_form.text_field :city, :size => 40  %>
+      <div class="require">*<%= a_form.label :Zip %></div>
+      <%= a_form.text_field :zip, :size => 40  %>
       <%= a_form.label :State %>
-      <%= a_form.text_field :state %>
+      <%= a_form.text_field :state, :size => 40  %>
     </div>
-    <%= a_form.label :Country %>
+    <div class="require">*<%= a_form.label :Country %></div>
     <%= a_form.country_select :country, {priority_countries: ["US"], :prompt => "--select county--"} %>
     <% end %>
   </div>
-
-  <div>
-    Phone Number:
+<br>
+  <div class="person-form">
+    <h3>Phone Number:</h3>
     <%= form.fields_for :phones do |p_form| %>
-    <%= p_form.label :Phone_Number %>
-    <%= p_form.text_field :phone_number %>
+    <div class="require">*<%= p_form.label :Phone_Number %></div>
+    <%= p_form.text_field :phone_number, :size => 40  %>
     <%= p_form.label :Comment %>
-    <%= p_form.text_field :comment %>
+    <%= p_form.text_area :comment %>
     <% end %>
   </div>
-
-  <div>
-    Email:
+<br>
+  <div class="person-form">
+    <h3>Email:</h3>
     <%= form.fields_for :emails do |e_form| %>
-    <%= e_form.label :Email %>
-    <%= e_form.text_field :email %>
+    <div class="require">*<%= e_form.label :Email %></div>
+    <%= e_form.text_field :email, :size => 40 %>
     <%= e_form.label :Comment %>
-    <%= e_form.text_field :comment %>
+    <%= e_form.text_area :comment %>
     <% end %>
   </div>
+  <br>
 
   <div class="actions">
     <%= form.submit %>

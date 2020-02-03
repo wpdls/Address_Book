@@ -29,7 +29,7 @@ class AddressesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update address" do
-    patch address_path(@address), params: { address: { street: @address.street, city: @address.city, zip: @address.zip, state: @address.state, country: @address.country, person_id: people(:one).id } }
+    patch address_url(@address), params: { address: { street: '123 Peach St.', city: 'Prague', zip: 12345, state: 'Cali', country: 'US', person_id: people(:one).id } }
     assert_redirected_to person_path(@address)
   end
 
