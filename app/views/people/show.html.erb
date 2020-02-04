@@ -3,29 +3,35 @@
       <%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%>
     </h1>
 
-    <div class="container_show" id="people">
+    <div class="container_show">
       <%= render @person %>
       <div id="add">
       <%= link_to 'edit/add your basic info', edit_person_path(@person), remote: true %>
       </div>
     </div>
 
-    <div class="container_show" id="phone-container">
+    <div class="container_show">
+    <div id="special-phone">
       <%= render @person.phones %>
+      </div>
       <div class="add">
       <%= link_to 'add more phone numbers', new_person_phone_path(:person_id => @person.id), remote: true, id: "phone" %>
       </div>
     </div>
 
-    <div class="container_show" id="email-container">
+    <div class="container_show" >
+    <div id="special-ajax">
     <%= render @person.emails %>
+    </div>
       <div class="add">
       <%= link_to 'add more emails', new_person_email_path(:person_id => @person.id), remote: true, id: "email" %>
       </div>
     </div>
         
-     <div class="container_show" id="address-container">
+     <div class="container_show" >
+     <div id="special-add">
      <%= render @person.addresses%>
+     </div>
       <div class="add">
       <%= link_to 'add more addresses', new_person_address_path(:person_id => @person.id), remote: true, id: "address" %>
       </div>
