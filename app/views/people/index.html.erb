@@ -13,8 +13,6 @@
           <td><%= person.first_name%> <%= person.last_name%></td>
         
           <td><%= link_to 'Show', person %><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    
-  
       <% end %>
     
   </table>
@@ -22,7 +20,7 @@
 
   <div>
   <div class="button">
-    <%= link_to 'New Person', new_person_path, :class => "text-warning" %>
+    <%= link_to 'New Person', new_person_path %><br><br>
   </div>
   <div>
 <div>

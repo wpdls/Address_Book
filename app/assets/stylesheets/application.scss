@@ -26,8 +26,8 @@ body {
 }
 html {
      height: 100vh;
+     width: 100%;
      margin-right: 0;
-     padding: 1rem;
      display: flex;
      align-items: center;
      justify-items: center;
@@ -56,3 +56,40 @@ h3 {
     font-size: 12px;
     padding-top: 2rem;
 }
+
+@media only screen and (max-width: 650px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    .container_show {
+        width: 450px;  
+    }
+  }
+
+   
+@media only screen and (max-width: 560px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+    .container_show {
+        width: 320px;
+    }
+    .person-form {
+        width: 380px;
+    }
+  }
+
+
+  @media only screen and (max-width: 430px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+    .container_show {
+        width: 260px;   
+    }
+    .person-form {
+        width: 270px;
+    }
+  }
+
+  
