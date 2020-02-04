@@ -49,7 +49,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to person_url(@person), notice: 'Person was successfully deleted.' }
+        format.html { redirect_to person_url(@person), notice: 'Person was successfully updated.' }
         format.js
         format.json { render :show, status: :ok, location: @person }
       else

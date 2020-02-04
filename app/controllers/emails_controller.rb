@@ -25,7 +25,6 @@ class EmailsController < ApplicationController
   # POST /emails
   # POST /emails.json
   def create
-    # @email = Email.new(email_params)
     @person = Person.find(params[:person_id])
     @email = @person.emails.build(email_params_new)
   

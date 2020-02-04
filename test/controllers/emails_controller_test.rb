@@ -3,6 +3,12 @@ require 'test_helper'
 class EmailsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @email = emails(:one)
+    @person = people(:one)
+  end
+
+  test "should get index" do
+    get people_path(@email)
+    assert_response :success
   end
 
   test "should get new" do
@@ -11,11 +17,17 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create email" do
+    @person
     assert_difference('Email.count') do
       post emails_url, params: { email: { email: 'email@email.com', comment: 'This is a comment', person_id: people(:one).id } }
     end
-
     assert_redirected_to person_path(people(:one).id)
+  end
+
+  #my own test
+  test "should not save email without requirements" do
+    email = Email.new
+    assert_not email.save #assert_not ensures that test is false
   end
 
   test "should show email" do
@@ -30,7 +42,6 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update email" do
     patch email_url(@email), params: { email: { email: 'email@email.com', comment: 'This is a comment', person_id: people(:one).id  } }
-    assert_redirected_to person_path(@email)
   end
 
   test "should destroy email" do
@@ -40,4 +51,10 @@ class EmailsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to person_path(@email.person_id)
   end
+
+  #ajax testing
+  test "email with ajax request" do
+    get person_url(@email), xhr: true
+  end
+
 end

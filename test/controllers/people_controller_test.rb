@@ -31,7 +31,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
-    get edit_person_url(@person)
+    get edit_person_url(@person), xhr: true
     assert_response :success
   end
 
