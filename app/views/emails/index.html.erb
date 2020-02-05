@@ -11,14 +11,14 @@
 
   <tbody>
     <% @emails.each do |email| %>
-   <div id="ajax">
+      <div id="ajax">
 <section class="show">
 <p> <%= email.email %> </p>
 <p> <%= email.comment %> </p>
 
 <div class="links">
-<%= link_to 'edit', edit_email_path(email), remote: true %>
-<%= link_to 'delete', email, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "delete" %>
+<%= link_to 'edit', edit_email_path(email) %>
+<%= link_to 'delete', email, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete" %>
 </div>
 </section>
 </div>

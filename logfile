@@ -926,3 +926,9 @@
 	SELECT * from emails;
 2020-02-02 17:59:41.962 CET [1921] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
 2020-02-02 17:59:41.962 CET [1921] STATEMENT:  SELECT "people".* FROM "people" WHERE (1) LIMIT $1
+2020-02-04 23:46:32.173 CET [59067] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
+2020-02-04 23:46:32.173 CET [59067] STATEMENT:  SELECT "people".* FROM "people" WHERE (4) LIMIT $1
+2020-02-04 23:47:14.299 CET [59504] ERROR:  argument of WHERE must be type boolean, not type integer at character 40
+2020-02-04 23:47:14.299 CET [59504] STATEMENT:  SELECT "people".* FROM "people" WHERE (980190962) LIMIT $1
+2020-02-05 11:01:35.839 CET [85734] LOG:  stats collector's time 2020-02-05 11:02:32.781998+01 is later than backend local time 2020-02-05 11:01:35.701861+01
+2020-02-05 11:01:35.855 CET [85735] LOG:  stats_timestamp 2020-02-05 11:02:32.781998+01 is later than collector's time 2020-02-05 11:01:35.855734+01 for database 0

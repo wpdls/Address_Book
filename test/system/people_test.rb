@@ -1,16 +1,5 @@
 require "application_system_test_case"
 
-#sample:
-# test "creating new post" do
-#   visit new_post_url
-#   assert selector "h1", text: "New Post"
-
-#   body = 'This is my test post'
-#   fill_in 'post[body]', with: body
-#   click_button 'Create Post'
-
-#   assert_text body
-# end
 
 class PeopleTest < ApplicationSystemTestCase
   setup do
@@ -27,19 +16,13 @@ class PeopleTest < ApplicationSystemTestCase
     click_on "New Person"
 
     click_on "Create Person"
-
-    assert_text "Person was successfully created"
-    click_on "Back"
   end
 
   test "updating a Person" do
-    visit people_url
-    click_on "Edit", match: :first
+    visit person_url(@person)
+    click_on "edit/add your basic info", match: :first
 
     click_on "Update Person"
-
-    assert_text "Person was successfully updated"
-    click_on "Back"
   end
 
   test "destroying a Person" do
@@ -47,7 +30,6 @@ class PeopleTest < ApplicationSystemTestCase
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
-
     assert_text "Person was successfully destroyed"
   end
 end

@@ -15,7 +15,7 @@ class EmailsController < ApplicationController
   # GET /emails/new
   def new
     @person = Person.find(params[:person_id])
-    @email = @person.emails.build(params[:email])
+    @email = @person.emails.build
   end
 
   # GET /emails/1/edit
@@ -35,7 +35,6 @@ class EmailsController < ApplicationController
         format.json { render :show, status: :created, location: @email }
       else
         format.html { render :new }
-        format.js
         format.json { render json: @email.errors, status: :unprocessable_entity }
       end
     end
@@ -51,7 +50,6 @@ class EmailsController < ApplicationController
         format.json { render :show, status: :ok, location: @email }
       else
         format.html { render :edit }
-        format.js
         format.json { render json: @email.errors, status: :unprocessable_entity }
       end
     end

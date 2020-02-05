@@ -10,19 +10,18 @@ class PhonesController < ApplicationController
   # GET /phones/1
   # GET /phones/1.json
   def show
-    @person = Person.find(params[:id])
+    @person = Person.find(params[:person_id])
     @phones = @person.phones
   end
 
   # GET /phones/new
   def new
     @person = Person.find(params[:person_id])
-    @phone = @person.phones.build(params[:phone])
+    @phone = @person.phones.build
   end
 
   # GET /phones/1/edit
   def edit
-    @phone = Phone.find(params[:id])
   end
 
   # POST /phones
@@ -35,11 +34,10 @@ class PhonesController < ApplicationController
     respond_to do |format|
       if @phone.save
         format.html { redirect_to person_path(@phone.person_id), notice: 'Phone was successfully created.' }
-        format.js
+        format.js 
         format.json { render :show, status: :created, location: @phone }
       else
         format.html { render :new }
-        format.js
         format.json { render json: @phone.errors, status: :unprocessable_entity }
       end
     end
@@ -55,7 +53,6 @@ class PhonesController < ApplicationController
         format.json { render :show, status: :ok, location: @phone }
       else
         format.html { render :edit }
-        format.js
         format.json { render json: @phone.errors, status: :unprocessable_entity }
       end
     end
@@ -67,7 +64,7 @@ class PhonesController < ApplicationController
     @phone.destroy
     respond_to do |format|
       format.html { redirect_to person_path(@phone.person_id), notice: 'Phone was successfully deleted.' }
-      format.js { redirect_to person_path(@phone.person_id), notice: 'Phone was successfully deleted.' }
+      format.js 
       format.json { head :no_content }
     end
   end

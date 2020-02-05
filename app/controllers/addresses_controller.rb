@@ -10,14 +10,14 @@ class AddressesController < ApplicationController
   # GET /addresses/1
   # GET /addresses/1.json
   def show
-    @person = Person.find(params[:id])
+    @person = Person.find(params[:person_id])
     @addresses = @person.addresses
   end
 
   # GET /addresses/new
   def new
     @person = Person.find(params[:person_id])
-    @address = @person.addresses.build(params[:address])
+    @address = @person.addresses.build
   end
 
   # GET /addresses/1/edit
@@ -38,7 +38,6 @@ class AddressesController < ApplicationController
         format.json { render :show, status: :created, location: @address }
       else
         format.html { render :new }
-        format.js
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end
@@ -54,7 +53,6 @@ class AddressesController < ApplicationController
         format.json { render :show, status: :ok, location: @address }
       else
         format.html { render :edit }
-        format.js
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end

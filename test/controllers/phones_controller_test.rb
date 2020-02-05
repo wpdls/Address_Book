@@ -23,12 +23,6 @@ class PhonesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to person_path(people(:one).id)
   end
 
-  #my own test
-  test "should not save phone without requirements" do
-    phone = Phone.new
-    assert_not phone.save #assert_not ensures that test is false
-  end
-
   test "should show phone" do
     get people_path(@phone)
     assert_response :success

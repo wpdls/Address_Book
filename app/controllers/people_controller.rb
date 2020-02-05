@@ -54,7 +54,6 @@ class PeopleController < ApplicationController
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }
-        format.js
         format.json { render json: @person.errors, status: :unprocessable_entity }
       end
     end

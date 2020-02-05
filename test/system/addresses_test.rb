@@ -3,39 +3,45 @@ require "application_system_test_case"
 class AddressesTest < ApplicationSystemTestCase
   setup do
     @address = addresses(:one)
+    @person = people(:one)
   end
 
-  test "visiting the index" do
-    visit addresses_url
-    assert_selector "h1", text: "Addresses"
+  test "creating an Address" do
+    visit person_url(@email)
+    click_on "add more addresses"
+
+    fill_in "Street", with: "123 Street"
+    fill_in "City", with: "Prague"
+    fill_in "Zip", with: 123
+    fill_in "Country", with: "United States"
+
+    click_on "Save"
   end
 
-  test "creating a Address" do
+  test "updating an Address" do
     visit addresses_url
-    click_on "New Address"
-
-    click_on "Create Address"
-
-    assert_text "Address was successfully created"
-    click_on "Back"
-  end
-
-  test "updating a Address" do
-    visit addresses_url
-    click_on "Edit", match: :first
+    click_on "edit", match: :first
 
     click_on "Update Address"
-
-    assert_text "Address was successfully updated"
-    click_on "Back"
   end
 
-  test "destroying a Address" do
+  test "destroying an Address" do
     visit addresses_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "delete", match: :first
     end
-
-    assert_text "Address was successfully destroyed"
   end
 end
+
+
+# sample:
+# test "creating new post" do
+#   visit new_post_url
+#   assert selector "h1", text: "New Post"
+
+#   body = 'This is my test post'
+#   fill_in 'post[body]', with: body
+#   click_button 'Create Post'
+
+#   assert_text body
+# end

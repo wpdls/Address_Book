@@ -1,12 +1,9 @@
 require 'test_helper'
 
 class PersonTest < ActiveSupport::TestCase
-  # def setup
-  #   @person = Person.new(first_name: 'Jayne', last_name: 'Jayne',
-  #   )
-  # end
+  test "should not save person without requirements" do
+    person = Person.new
+    assert_not person.save #assert_not ensures that test is false
+  end
 
-  # test "#phones" do
-  #   assert_equal 1, @person.phones.size
-  # end
 end
