@@ -10,24 +10,22 @@
   </thead>
 
   <tbody>
-    <% @phones.each do |phone| %>
-      <tr>
-<div id="ajax-phone">
-    <section class="show">
-        <div id="phone-show">
+  <% @phones.each do |phone| %>
+    <tr>
+      <div id="ajax-phone">
+        <section class="show">
+          <div id="phone-show">
             <p> <%= phone.phone_number %> </p>
             <p> <%= phone.comment %> </p>
-        </div>
-
-        <div class="links">
+          </div>
+          <div class="links">
             <%= link_to 'edit', edit_phone_path(phone) %>   
             <%= link_to 'delete', phone, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-    </section>
-</div>
-
-      </tr>
-    <% end %>
+          </div>
+        </section>
+      </div>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 

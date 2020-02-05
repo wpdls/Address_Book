@@ -1,12 +1,12 @@
 <div id="hello">
 <% @phones.each do |phone| %>
-<div class="show" id="phone-show">
-<p> <%= phone.phone_number %> </p>
-<p> <%= phone.comment %> </p>
-<div class="links">
-<%= link_to 'edit', edit_phone_path(phone) %>   
-<%= link_to 'delete', phone, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
-</div>
-</div>
+    <div class="show" id="phone-show">
+        <p> <%= phone.phone_number %> </p>
+        <p> <%= phone.comment %> </p>
+        <div class="links">
+            <%= link_to 'edit', edit_phone_path(phone) %>   
+            <%= link_to 'delete', phone, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
+        </div>
+    </div>
 <% end %>
 </div>

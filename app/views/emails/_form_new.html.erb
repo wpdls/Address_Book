@@ -3,7 +3,6 @@
   <% if @email.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@email.errors.count, "error") %> prohibited this phone from being saved:</h2>
-
       <ul>
         <% @email.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -12,12 +11,12 @@
     </div>
   <% end %>
 
-    <div>
-      <div class="require">*<%= form.label :Email %></div>
-      <%= form.text_field :email, :size => 40 %><br>
-      <%= form.label :Comment %>
-      <%= form.text_field :comment %><br>
-    </div>
+  <div>
+    <div class="require">*<%= form.label :Email %></div>
+    <%= form.text_field :email, :size => 40 %><br>
+    <%= form.label :Comment %>
+    <%= form.text_field :comment %><br>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

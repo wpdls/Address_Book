@@ -20,12 +20,6 @@ class AddressesControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-#my own test
-  test "should not save address without requirements" do
-    address = Address.new
-    assert_not address.save #assert_not ensures that test is false
-  end
-
   test "should show address" do
     get people_path(@address)
     assert_response :success

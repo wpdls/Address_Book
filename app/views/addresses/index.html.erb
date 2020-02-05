@@ -10,24 +10,22 @@
 
   <tbody>
     <% @addresses.each do |address| %>
-  <div id="ajax-address">
-  <section class="show">
-      <div id="address-show">
-      <p> <%= address.street %> </p>
-      <p> <%= address.city %>, <%= address.state %> <%= address.zip %></p>
-      <p><%= address.country %></p>
-      </div>
+    <div id="ajax-address">
+      <section class="show">
+        <div id="address-show">
+          <p> <%= address.street %> </p>
+          <p> <%= address.city %>, <%= address.state %> <%= address.zip %></p>
+          <p><%= address.country %></p>
+        </div>
 
-      <div class="links">
-      <%= link_to 'edit', edit_address_path(address)%> 
-      <%= link_to 'delete', address, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete" %>
-      </div>
-  </section>
-</div>
+        <div class="links">
+          <%= link_to 'edit', edit_address_path(address)%> 
+          <%= link_to 'delete', address, method: :delete, data: { confirm: 'Are you sure?' }, class: "delete" %>
+        </div>
+      </section>
+    </div>
     <% end %>
   </tbody>
-</table>
-
-<br>
+</table><br>
 
 <%= link_to 'New Address', new_address_path %>

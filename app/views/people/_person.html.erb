@@ -1,8 +1,8 @@
 <div id="ajax-person">
-<div class="show">
-      <td><%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%></td><br>
-      <td><%= @person.social_security_number%></td><br>
-      <td><%= @person.birthdate.try(:strftime, '%B %d, %Y')%></td><br>
-      <td><%= @person.comment%></td>
-</div>
+  <div class="show">
+    <td><%= @person.salutation%> <%= @person.first_name%> <%= @person.middle_name%> <%= @person.last_name%></td><br>
+    <td><%= @person.social_security_number%></td><br>
+    <td><%= @person.birthdate.try(:strftime, '%B %d, %Y')%></td><br>
+    <td><%= @person.comment%></td>
+  </div>
 </div>

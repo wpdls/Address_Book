@@ -12,22 +12,19 @@
   <% end %>
 
   <div class="person-form">
-    
-      <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %><div class="padding"></div>
-      
-      <div class="require">*<%= form.label :First_Name %></div>
-      <%= form.text_field :first_name %>    
-
-      <%= form.label :Middle_Name %>
-      <%= form.text_field :middle_name %>
-      <div class="require">*<%= form.label :Last_Name %></div>
-      <%= form.text_field :last_name %>
+    <%= select(:person, :salutation, %w[Mr. Mrs. Ms.], prompt: true) %><div class="padding"></div>
+    <div class="require">*<%= form.label :First_Name %></div>
+    <%= form.text_field :first_name %>
+    <%= form.label :Middle_Name %>
+    <%= form.text_field :middle_name %>
+    <div class="require">*<%= form.label :Last_Name %></div>
+    <%= form.text_field :last_name %>
     <%= form.label :Social_Security_Number %>
     <%= form.text_field :social_security_number, :size => 40 %><div class="padding"></div>
     <div class="form"><%= form.label :Birthday %>
     <%= form.date_select :birthdate, 
-    {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, 
-    start_year: Date.today.year, end_year: Date.today.year - 100} %></div>
+      {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, 
+      start_year: Date.today.year, end_year: Date.today.year - 100} %></div>
     <%= form.label :Comment %>
     <%= form.text_area :comment %>
   </div>
